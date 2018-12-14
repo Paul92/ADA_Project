@@ -80,7 +80,8 @@ Although the dataset has 6 levels of truth, we take a look at the language
 used in true and false statements in general, looking for differences in word
 usage.
 
-![Wordcloud truefalse](assets/wordcloud_truefalse.png)
+![Wordcloud false](assets/wordcloud_false.png)
+![Wordcloud true](assets/wordcloud_true.png)
 
 We can make a few remarks on the words usage. The word 'million' is more used
 in true statements, while the word 'billion' is more used in false statements.
