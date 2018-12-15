@@ -108,4 +108,44 @@ the subjects with the largest proportion of lies:
 ![subjectsnorm](assets/subjects_normalized.png)
 
 
+#### Who is speaking
+
+We perform a similar analysis on the speakers. The statements in the dataset
+have been made by 3310 unique speakers, such as Donald Trump or Ron Jonson, or
+sources such as Planned Parenthood or Blog Posts. We look at the 29 speakers
+with more than 50 statements.
+
+![subjects](assets/speakers.png)
+
+
+
+![subjects](assets/speakersnorm.png)
+
+We notice that Barack Obama, Donald Trump and Hillary Clinton have the most
+statements. The normalized truth distribution visualization is a good
+indication of the trustworthiness of a politician. Barack Obama and Hilary
+Clinton are amongst the most reliable, with relatively few deceptive statements
+compared to unreliable sources, such as blog postings, or other politicians,
+such as Donald Trump.
+
+We note that this analysis is performed over a small dataset. The
+generalization of this analysis is based on the assumption of uniform sampling
+of the dataset. However, at such low statement counts, it is very possible that
+the sampling introduced some bias.
+
+
+#### What are speaker's professions
+
+Another relevant feature for the trustworthiness of an individual might be
+their profession. In the Liar dataset, 803 professions are represented, with 18
+of them with over 50 samples.
+
+
+![jobs](assets/jobs.png)
+
+
+
+![jobs](assets/jobsnorm.png)
+
+
 
