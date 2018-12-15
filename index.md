@@ -68,7 +68,7 @@ Adolphs (2003)). Note that these publications talk about word families and
 lexical items, while we count tokens. Still, it provides a good intuition of
 the size of the vocabulary represented in the dataset.
 
-![Wordcloud all](assets/wordcloud_all.png)
+![Wordcloud all](assets/wordcloud_all.png){: .center-image }
 
 Looking at the most common words in the dataset, we can observe the main topics
 of discussion in the politics at the time, such as health care or Barack
@@ -80,8 +80,8 @@ Although the dataset has 6 levels of truth, we take a look at the language
 used in true and false statements in general, looking for differences in word
 usage.
 
-![Wordcloud false](assets/wordcloud_false.png)
-![Wordcloud true](assets/wordcloud_true.png)
+![Wordcloud false](assets/wordcloud_false.png){: .center-image }
+![Wordcloud true](assets/wordcloud_true.png){: .center-image }
 
 We can make a few remarks on the words usage. The word 'million' is more used
 in true statements, while the word 'billion' is more used in false statements.
@@ -91,6 +91,21 @@ precision. 'Health care', 'obamacare' and 'Barack Obama' are also more present
 in untruthful statements. This is an interesting fact - since a large part of
 the dataset overlaps with the Barack Obama's presidency, health care being
 a controversial topic at the time.
+
+
+#### Subjects people talk about
+
+The dataset has over 12000 statements discussing 145 unique subjects, such as
+economy, climate change or immigration. We focused our analysis on the 54
+subjects with more than 100 statements:
+
+![subjects](assets/subjects.png)
+
+The economy and the health-care are the most represented subjects in the
+dataset. As noticed from the language analysis, health-care and medicare are
+the subjects with the largest proportion of lies:
+
+![subjectsnorm](assets/subjects_normalized.png)
 
 
 
