@@ -128,7 +128,7 @@ compared to unreliable sources, such as Blog Posts, or other politicians,
 such as Donald Trump.
 
 Another remark is that, according to the available data, Facebook posts are
-more reliable in general and blog posts. Chain emails are the worst source of
+more reliable in general than blog posts. Chain emails are the worst source of
 information, with the highest number of lies. This is an interesting premise to
 follow in trying to determine the best source for information, but more data
 would be needed for a definite answer.
