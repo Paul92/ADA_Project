@@ -204,6 +204,9 @@ being able to post their opinion. Public figures on the other hand, have earned
 the trust of a group (such as a political party) and might have more to lose by
 lying.
 
+Note that in this analysis, statements made by public figures on social media
+are attributed to their author, and not to the social media class.
+
 #### Do people use numbers in lies?
 
 There is an old proverb saying that *numbers don't lie*. The presence of
@@ -264,9 +267,9 @@ forest. Looking at the most informative features, the most relevant is the
 output of the naive Bayes classifier (which encodes the statement), followed
 by the metrics for sentiment analysis.
 
-The remaining features are: subject - taxes, subject - health care, party
-- republican, party - democrat, context - a speech, state - Florida, context
-  - a television ad, subject - immigration.
+The remaining features are: subject - taxes, subject - health care,
+party - republican, party - democrat, context - a speech, state - Florida,
+context - a television ad, subject - immigration.
 
 As expected from the previous analysis, there are hot topics such as taxes and
 health care that, by their controversial nature and political context, are more
@@ -274,4 +277,14 @@ likely to be lied about or more likely to be discussed truthfully. Also, the
 political affiliation plays an important role, as discussed above.
 
 
+#### So, what to look for?
+
+The analysis we performed shows some "red flags" in political statements. The
+results we found are not definitive, but they show some statistical trends in 
+the dataset we analyzed. One of the highest differences we observed was between
+statements from social media and from public figures, the former being much
+more unreliable. Other remarks of interest include the presence of some
+controversial topics, such as health care, and the trustworthiness of some
+public figures, such as Barack Obama. Also, we looked at some features of
+the deceiving statements, such as the tendency to avoid numbers.
 
