@@ -27,7 +27,7 @@ Another related problem of modern society are the fake news. Media
 companies strive to create high impact news, not always reporting the truth.
 
 In this project, we perform an analysis of the Liar dataset, a dataset of
-political statements from [politifact](http://www.politifact.com), looking
+political statements from [PolitiFact](http://www.politifact.com), looking
 at cues for determining the truthfulness of a statement. We also experiment
 with some machine learning models to get more insight into the data and
 extrapolate this insight into new statements.
@@ -69,13 +69,13 @@ lexical items, while we count tokens.
 ![Wordcloud all](assets/wordcloud_all.png){: .center-image }
 
 Looking at the most common words in the dataset, we can observe the main topics
-of discussion in the politics at the time, such as health care or Barack
+of discussion in politics at the time, such as health care or Barack
 Obama, as well as some features of the political speech, such as the prevalence
-of percents or years. Also, topics of interests for politics such as bill,
+of percentages or years. Also, topics of interest for politics such as bill,
 vote or government are present amongst the most used words in this dataset.
 
 Although the dataset has 6 levels of truth, we take a look at the language
-used in true and false statements in general, looking for differences in word
+used in true and false statements in general, looking for differences in words
 usage.
 
 ![Wordcloud false](assets/wordcloud_false.png){: .center-image }
@@ -95,12 +95,12 @@ a controversial topic at the time.
 
 The dataset has over 12000 statements discussing 145 unique subjects, such as
 economy, climate change or immigration. We focused our analysis on the 54
-subjects with more than 100 statements:
+subjects, each with more than 100 statements:
 
 ![subjects](assets/subjects.png){: .center-image }
 
-The economy and the health-care are the most represented subjects in the
-dataset. As noticed from the language analysis, health-care and medicare are
+The economy and the health care are the most commonly used subjects in the
+dataset. As noticed from the language analysis, health care and Medicare are
 the subjects with the largest proportion of lies:
 
 ![subjectsnorm](assets/subjects_normalized.png){: .center-image }
@@ -123,11 +123,17 @@ We notice that Barack Obama, Donald Trump and Hillary Clinton have the most
 statements. The normalized truth distribution visualization is a good
 indication of the trustworthiness of a politician. Barack Obama and Hilary
 Clinton are amongst the most reliable, with relatively few deceptive statements
-compared to unreliable sources, such as blog postings, or other politicians,
+compared to unreliable sources, such as Blog Posts, or other politicians,
 such as Donald Trump.
 
-We note that this analysis is performed over a small dataset. The
-generalization of this analysis is based on the assumption of uniform sampling
+Another remark is that, according to the available data, Facebook posts are
+more reliable in general and blog posts. Chain emails are the worst source of
+information, with the highest number of lies. This is an interesting premise to
+follow in trying to determine the best source for information, but more data
+would be needed for a definite answer.
+
+Since this analysis is performed over a small dataset, its
+generalizatio is based on the assumption of uniform sampling
 of the dataset. However, at such low statement counts, it is very possible that
 the sampling introduced some bias.
 
@@ -142,8 +148,17 @@ of them with over 50 samples.
 
 ![jobs](assets/jobsnorm.png){: .center-image }
 
-The most common jobs are political positions, the most common being senator and
-house member. This is expected, considering that the statements are political.
+The most frequently encountered jobs are political positions, the most common 
+being senator and house member. This is expected, considering that the 
+statements are political. Looking at the normalized distribution, the president
+is the most reliable source, with under 30% of the statements being classified
+as lies.
+
+Unsurprisingly, the social media is remarkably unreliable, with a high number
+of outrageous lies. All the statements of a President Elect belong to Donald
+Trump, while 611 out of the 615 presidential statements belong to Barack Obama.
+This correlates with the speaker trustworthiness analysed above, with Barack
+Obama being one of the most trustworthy people.
 
 #### Political affiliation
 
@@ -153,4 +168,17 @@ democrats, republicans or with no political affiliations.
 ![jobs](assets/parties.png){: .center-image }
 
 ![jobs](assets/partiesnorm.png){: .center-image }
+
+In general, there is a tendency of the democrats to be more sincere than the
+republicans. Barack Obama has only 15% of their statements and Donald Trump has
+6% of the republican statements. We have found that removing these 2 people
+does not change the general trend, republicans still having about 10% more
+untruthful statements than democrats.
+
+This is possibly due to the political context in which the data has been
+sampled - the republican opposition might have had an incentive to bend the
+truth to consolidate its position. We again note that this is a conclusion
+reached based on a small dataset and intution regarding the political context,
+being by no means a definitive statement.
+
 
