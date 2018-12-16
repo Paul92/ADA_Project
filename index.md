@@ -142,7 +142,7 @@ the sampling introduced some bias.
 
 Another relevant feature for the trustworthiness of an individual might be
 their profession. In the Liar dataset, 803 professions are represented, with 18
-of them with over 50 samples.
+of them having over 50 samples.
 
 
 ![jobs](assets/jobs.png){: .center-image }
