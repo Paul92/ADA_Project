@@ -250,6 +250,11 @@ We have trained multiple classifiers on the dataset, in an attempt not to gain
 high accuracy, but to get more insight into which features are more informative
 in classification.
 
+A naive Bayes classifier trained on the statements themselves shows the words
+that occur the most in various classes. To ease the interpretation of this
+analysis, we have split the dataset in only two classes, true and false
+statements. 
+
 We have augmented the dataset with the output from a naive Bayes statement
 classifier, sentiment analysis, presence of numbers and trained a random
 forest. Looking at the most informative features, the most relevant is the
