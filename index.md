@@ -74,7 +74,7 @@ Obama, as well as some features of the political speech, such as the prevalence
 of percentages or years. Also, topics of interest for politics such as bill,
 vote or government are present amongst the most used words in this dataset.
 
-Although the dataset has 6 levels of truth, analyze the language
+Although the dataset has 6 levels of truth, we analyze the language
 used in true and false statements in general, looking for differences in words
 usage.
 
@@ -83,12 +83,12 @@ usage.
 
 We can make a few remarks on the words usage. The word 'million' is more used
 in true statements, while the word 'billion' is more used in false statements.
-This can suggest a tendency of exaggeration. Also, 'percent' tends to be less
-used in false statements, possibly indicating a tendency in the lack of
-precision. 'Health care', 'obamacare' and 'Barack Obama' are also more present
-in untruthful statements. This is an interesting fact - since a large part of
-the dataset overlaps with the Barack Obama's presidency, health care being
-a controversial topic at the time.
+This can suggest a tendency of exaggeration. Also, 'percent' and 'year' tend
+to be less used in false statements, possibly indicating a tendency in the lack
+of precision. 'Health care', 'obamacare' and 'Barack Obama' are also more 
+present in untruthful statements. This is an interesting fact - since a large 
+part of the dataset overlaps with the Barack Obama's presidency, health care
+being a controversial topic at the time.
 
 
 #### Subjects people talk about
@@ -101,7 +101,8 @@ subjects, each with more than 100 statements:
 
 The economy and the health care are the most commonly used subjects in the
 dataset. As noticed from the language analysis, health care and Medicare are
-the subjects with the largest proportion of lies:
+the subjects with the largest proportion of lies, while income and poverty
+rates appear more often in true statements:
 
 ![subjectsnorm](assets/subjects_normalized.png){: .center-image }
 
@@ -110,7 +111,7 @@ the subjects with the largest proportion of lies:
 
 We perform a similar analysis on the speakers. The statements in the dataset
 have been made by 3310 unique speakers, such as Donald Trump or Ron Jonson, or
-sources such as Planned Parenthood or Blog Posts. We look at the 29 speakers
+sources such as Blog or Facebook Posts. We look at the 29 speakers
 with more than 50 statements.
 
 ![subjects](assets/speakers.png){: .center-image }
@@ -170,10 +171,10 @@ democrats, republicans or with no political affiliations.
 ![partiesnorm](assets/partiesnorm.png){: .center-image }
 
 In general, there is a tendency of the democrats to be more sincere than the
-republicans. Barack Obama has only 15% of their statements and Donald Trump has
-6% of the republican statements. We have found that removing these 2 people
-does not change the general trend, republicans still having about 10% more
-untruthful statements than democrats.
+republicans. Barack Obama made only 15% of the democrat statements and Donald 
+Trump only 6% of the republican ones. We have found that removing these 2 
+people does not change the general trend, republicans still having about 10% 
+more untruthful statements than democrats.
 
 This is possibly due to the political context in which the data has been
 sampled - the republican opposition might have had an incentive to bend the
@@ -184,5 +185,87 @@ being by no means a definitive statement.
 The people with no political affilition have a relatively high number of
 untrue statements. This is likely due to the unreliable sources included in
 this category, such as blog posts.
+
+#### Social media vs. public figures on hot topics
+
+We do a short comparision of the trustworthiness between social media sources,
+such as Facebook posts, chain email, and statements from public figures,
+looking at two widely debated topics in politics, health care and income.
+
+
+![parties](assets/healthcare_comp.png){: .center-image }
+
+
+![partiesnorm](assets/income_comp.png){: .center-image }
+
+On both topics, the social media is much more unreliable than public figures.
+We can motivate this by the lack of any filter of the social media, anyone
+being able to post their opinion. Public figures on the other hand, have earned
+the trust of a group (such as a political party) and might have more to lose by
+lying.
+
+#### Do people use numbers in lies?
+
+There is an old proverb saying that *numbers don't lie*. The presence of
+numbers in a statements might indicate its trustworthiness, due to various
+biases that occur when people lie.
+
+
+![numbers](assets/numbers_comp.png){: .center-image }
+
+
+The statements that contain numbers tend to have a higher truth ratio, most
+likely due to the precise nature of numbers. However, this is not definitory:
+there is still about a third of statements that contain numbers and are
+untruthful.
+
+#### Sentimental analysis
+
+When analysing features of the natural language, especially when considering
+a context such as politics which people can get passionate about, the
+sentimental analysis might be insightful.
+
+Unfortunately, the quantitative analisys does not suggest any strong bias in
+any of the classes:
+
+![partiesnorm](assets/sentiment_positivity_trans.png){: .smaller }
+
+
+![partiesnorm](assets/sentiment_negativity_trans.png){: .smaller }
+
+
+
+#### Most important features in discriminating lies
+
+Now we can answer the most important question: what is the most important
+feature of a statement that can be used to determine its truthfulness.
+
+Using machine learning approaches for a definitive classification is very
+difficult, especially when considering the complexity of the problem and the
+limited size of the dataset. The original publication
+[Liar dataset (Wang, 2017)](https://arxiv.org/abs/1705.00648) manages to
+achieve only about 30% accuracy in classification.
+
+We have trained multiple classifiers on the dataset, in an attempt not to gain
+high accuracy, but to get more insight into which features are more informative
+in classification.
+
+We have augmented the dataset with the output from a naive Bayes statement
+classifier, sentiment analysis, presence of numbers and trained a random
+forest. Looking at the most informative features, the most relevant is the
+output of the naive Bayes classifier (which encodes the statement), followed
+by the metrics for sentiment analysis.
+
+The remaining features are: subject - taxes, subject - health care, party
+- republican, party - democrat, context - a speech, state - Florida, context
+  - a television ad, subject - immigration.
+
+As expected from the previous analysis, there are hot topics such as taxes and
+health care that, by their controversial nature and political context, are more
+likely to be lied about or more likely to be discussed truthfully. Also, the
+political affiliation plays an important role, as discussed above.
+
+
+
 
 
