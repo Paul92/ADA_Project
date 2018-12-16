@@ -74,7 +74,7 @@ Obama, as well as some features of the political speech, such as the prevalence
 of percentages or years. Also, topics of interest for politics such as bill,
 vote or government are present amongst the most used words in this dataset.
 
-Although the dataset has 6 levels of truth, we take a look at the language
+Although the dataset has 6 levels of truth, analyze the language
 used in true and false statements in general, looking for differences in words
 usage.
 
@@ -165,9 +165,9 @@ Obama being one of the most trustworthy people.
 Over 84% of the speakers in our dataset have 3 political affiliations, being
 democrats, republicans or with no political affiliations. 
 
-![jobs](assets/parties.png){: .center-image }
+![parties](assets/parties.png){: .center-image }
 
-![jobs](assets/partiesnorm.png){: .center-image }
+![partiesnorm](assets/partiesnorm.png){: .center-image }
 
 In general, there is a tendency of the democrats to be more sincere than the
 republicans. Barack Obama has only 15% of their statements and Donald Trump has
@@ -180,5 +180,9 @@ sampled - the republican opposition might have had an incentive to bend the
 truth to consolidate its position. We again note that this is a conclusion
 reached based on a small dataset and intution regarding the political context,
 being by no means a definitive statement.
+
+The people with no political affilition have a relatively high number of
+untrue statements. This is likely due to the unreliable sources included in
+this category, such as blog posts.
 
 
