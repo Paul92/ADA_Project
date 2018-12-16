@@ -253,7 +253,10 @@ in classification.
 A naive Bayes classifier trained on the statements themselves shows the words
 that occur the most in various classes. To ease the interpretation of this
 analysis, we have split the dataset in only two classes, true and false
-statements. 
+statements. In this case, *takeover* is the most informative word, being
+11.5 more likely to be in false statements. *scheme*, *Cuccinelli*, *socialist*,
+*showed*, *illegals*, *McAauliffe* and are also words that appear 7 to 9 times
+more likely to be in false statements.
 
 We have augmented the dataset with the output from a naive Bayes statement
 classifier, sentiment analysis, presence of numbers and trained a random
@@ -269,8 +272,6 @@ As expected from the previous analysis, there are hot topics such as taxes and
 health care that, by their controversial nature and political context, are more
 likely to be lied about or more likely to be discussed truthfully. Also, the
 political affiliation plays an important role, as discussed above.
-
-
 
 
 
