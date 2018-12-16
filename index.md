@@ -7,7 +7,7 @@ layout: default
 
 The advent of internet and the tremendous interconnectivity it created between
 people comes with the downside of less checks for the validity of the
-information. Nowdays everyone can have a website and share information, without
+information. Nowadays everyone can have a website and share information, without
 restrictions on the content quality.
 
 Understanding the lying patterns in order to be able to detect lies is a
@@ -18,9 +18,9 @@ in this direction, performing analysis of labelled political statements.
 Politics is a widely debated topic with direct impact on people's
 lives. Most modern states in Europe and North America are based on
 representative democracy, where vital decisions regarding the future of the
-country are taken by representatives chosen thorugh vote. Trusting those people
+country are taken by representatives chosen through vote. Trusting those people
 is therefore a vital, but not an easy task. There is a strong incentive of
-deforming the truth or lying in the election campain to gain more votes, or
+deforming the truth or lying in the election campaign to gain more votes, or
 during their mandate in order to keep a position of power.
 
 Another related problem of modern society are the fake news. Media
@@ -134,7 +134,7 @@ follow in trying to determine the best source for information, but more data
 would be needed for a definite answer.
 
 Since this analysis is performed over a small dataset, its
-generalizatio is based on the assumption of uniform sampling
+generalization is based on the assumption of uniform sampling
 of the dataset. However, at such low statement counts, it is very possible that
 the sampling introduced some bias.
 
@@ -179,16 +179,16 @@ more untruthful statements than democrats.
 This is possibly due to the political context in which the data has been
 sampled - the republican opposition might have had an incentive to bend the
 truth to consolidate its position. We again note that this is a conclusion
-reached based on a small dataset and intution regarding the political context,
+reached based on a small dataset and intuition regarding the political context,
 being by no means a definitive statement.
 
-The people with no political affilition have a relatively high number of
+The people with no political affiliation have a relatively high number of
 untrue statements. This is likely due to the unreliable sources included in
 this category, such as blog posts.
 
 #### Social media vs. public figures on hot topics
 
-We do a short comparision of the trustworthiness between social media sources,
+We do a short comparison of the trustworthiness between social media sources,
 such as Facebook posts, chain email, and statements from public figures,
 looking at two widely debated topics in politics, health care and income.
 
